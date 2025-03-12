@@ -42,15 +42,31 @@
 #main()
 
 
+#get main():
+# x=get_int()
+#print(f"x is {x}")
+
+
+# def get_int():   
+ #   while True:
+ #       try:
+ #         return x = int(input("Whats x?"))
+ #       except ValueError:
+ #         pass
+
+#main()
+
+
+
 get main():
- x=get_int()
+ x=get_int("Whats x?")
 print(f"x is {x}")
 
 
- def get_int():   
+ def get_int(prompt):   
     while True:
         try:
-          return x = int(input("Whats x?"))
+          return x = int(input("prompt"))
         except ValueError:
           pass
 
