@@ -24,6 +24,14 @@
 name =input("Whats your name ?").strip().title()
 #print(f"Hello, {name}")
 
+
+
+
+# f-strings allow embedding expressions inside {} within a string.
+#"Hello, {name}"
+#{name} is a placeholder inside the string.
+#Python replaces {name} with the value of the name variable at runtime
+
 first,last =name.split()
 
 print("Hello " +first)
