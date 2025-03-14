@@ -1,0 +1,13 @@
+    a = int(input().strip())
+    b = int(input().strip())
+    print(a//b)
+    print(a/b)
+
+
+Integer Division (//):
+
+// gives the quotient without the remainder (floor division).
+
+Float Division (/):
+
+/ performs standard division with decimal values.
