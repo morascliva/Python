@@ -32,6 +32,6 @@ print(f"Hello, {name}")
 #{name} is a placeholder inside the string.
 #Python replaces {name} with the value of the name variable at runtime
 
-first,last =name.split()
+first,last =name.split()     # Split the name into first and last
 
 print("Hello " +first)
