@@ -8,7 +8,7 @@
 #include quotations
 #print( "Hi, \"student\"")
 
-#print("Hello," , end="")
+#print("Hello," , end="")    #end overrides \n
 #print(name) 
 
 #removes whitespace from string  from the left and right 
