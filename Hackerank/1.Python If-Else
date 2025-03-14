@@ -8,3 +8,17 @@ elif 6 <= n <= 20:  # Even and in range 6 to 20
     print("Weird")
 else:  # Even and greater than 20
     print("Not Weird")
+
+
+
+
+ n = int(input().strip())  # Read input and remove extra spaces
+
+if n%2==1:
+    print("Weird")
+elif 2<=n<=5:
+    print("Not Weird")
+elif 6<=n<=20:
+    print("Weird")
+elif n>20:
+    print("Not Weird")  
