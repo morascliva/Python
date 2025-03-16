@@ -24,9 +24,11 @@
 #def hello(to="world"):
 #    print("Hello,", to)
 
-#hello()
+#hello()                                            Hello, world
+
 #name=input("Whats your name")
-#hello(name)    
+#hello(name)                                        Hello, Alice
+
 
 ------------------------------------------------
 
