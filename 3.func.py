@@ -7,7 +7,7 @@
  
 
 
-
+-----------------------------------------------
 
 #def hello(to):
 #    print("Hello,", to)
@@ -16,6 +16,9 @@
 
 #name =input("whats your name")
 #hello(name)    
+------------------------------------------------
+
+
 
 
 #def hello(to="world"):
@@ -24,6 +27,8 @@
 #hello()
 #name=input("Whats your name")
 #hello(name)    
+
+------------------------------------------------
 
 def main():
     x= int (input ("Whats x?"))
