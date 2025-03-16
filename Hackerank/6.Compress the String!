@@ -1,0 +1,10 @@
+from itertools import groupby
+
+# Read input
+s = input().strip()
+
+# Apply groupby() to count consecutive characters
+compressed = [(len(list(group)), int(key)) for key, group in groupby(s)]
+
+# Print result in required format
+print(" ".join(map(str, compressed)))
