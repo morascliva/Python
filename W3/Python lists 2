@@ -1,0 +1,220 @@
+thislist = ["apple", "banana", "cherry"]
+
+thislist.append("orange")
+
+print(thislist)
+
+['apple', 'banana', 'cherry', 'orange']
+-----------------------------------------------
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+
+thislist.extend(tropical)
+
+print(thislist)
+
+['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+----------------------------------------------------
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+
+['apple', 'banana', 'cherry', 'kiwi', 'orange']
+-------------------------------------------------------
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+
+['apple', 'cherry']
+--------------------------------------------------------
+
+thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+thislist.remove("banana")
+print(thislist)
+​
+['apple', 'cherry', 'banana', 'kiwi']
+-----------------------------------------------------------
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+['apple', 'cherry']
+-------------------------------------------------------
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+
+['apple', 'banana']
+---------------------------------------------
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+
+
+['banana', 'cherry']
+--------------------------------------------------
+thislist = ["apple", "banana", "cherry"]
+del thislist
+print(thislist) #this will cause an error because you have succsesfully deleted "thislist".
+
+---------------------------------------------------
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+[]
+-----------------------------------------
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+  print(x)
+
+apple
+banana
+cherry
+-----------------------------------------
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+  print(thislist[i])
+
+apple
+ banana
+ cherry
+-----------------------------------------
+thislist = ["apple","banana","grapes"]
+i =0
+while i <len(thislist):
+    print(thislist[i])
+    i = i+1
+apple
+banana
+grapes
+
+---------------------------------------------
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
+apple
+orange
+cherry
+--------------------------------------------
+fruit =["cherry","apple","orange","pineapple","grapes","kiwi"]
+newlist =[]
+
+for x in fruit:
+    if "a" in x:
+        newlist.append(x)
+print(newlist)        
+
+
+['apple', 'orange', 'pineapple', 'grapes']
+-----------------------------------------------------
+
+fruits =["apple","orange","cherry","strawberry","lychee"]
+newlist=[x for x in fruits if "a" in x]
+print(newlist)
+
+['apple', 'orange', 'strawberry']
+-------------------------------------------------------
+
+Syntax
+
+newlist = [expression for item in iterable if condition == True]
+--------------------------------------------------------
+
+newlist = [x for x in fruits if x != "apple"]
+newlist = [x for x in fruits]
+newlist = [x for x in range(10)]
+newlist = [x for x in range(10) if x < 5]
+
+Set the values in the new list to upper case:
+newlist = [x.upper() for x in fruits]
+
+Set all values in the new list to 'hello':
+newlist = ['hello' for x in fruits]
+
+Return "orange" instead of "banana":
+newlist = [x if x != "banana" else "orange" for x in fruits]
+
+-----------------------------------------------------------------
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+
+----------------------------------------------------------------
+thislist = [100, 50, 65, 82, 23]
+thislist.sort()
+print(thislist)
+
+---------------------------------------------------------------
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+---------------------------------------------------------------
+
+Sort the list based on how close the number is to 50:
+
+def myfunc(n):
+  return abs(n - 50)
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+-----------------------------------------------------------
+
+Case sensitive sorting can give an unexpected result:
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort()
+print(thislist)
+----------------------------------------------------------
+Perform a case-insensitive sort of the list:
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist)
+-----------------------------------------------------------
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist)
+---------------------------------------------------------
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+-------------------------------------------------------
+Make a copy of a list with the list() method:
+
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+------------------------------------------------------
+Make a copy of a list with the : operator:
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist[:]
+print(mylist)
+---------------------------------------------------
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+print(list3)
+------------------------------------------------
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+for x in list2:
+  list1.append(x)
+
+print(list1)
+---------------------------------------------
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+list1.extend(list2)
+print(list1)
+--------------------------------------------
