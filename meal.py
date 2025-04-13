@@ -1,3 +1,4 @@
+
 def main():
     time = input("What time is it? ").strip()
     hours = convert(time)
