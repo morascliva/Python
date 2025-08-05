@@ -1,0 +1,21 @@
+class Solution:
+    def whichWeekDay(self, day):
+        def switch_days(option):
+            if option == 1:
+                print("Monday")
+            elif option == 2:
+                print("Tuesday")
+            elif option == 3:
+                print("Wednesday")
+            elif option == 4:
+                print("Thursday")
+            elif option == 5:
+                print("Friday")
+            elif option == 6:
+                print("Saturday")
+            elif option == 7:
+                print("Sunday")
+            else:
+                print("Invalid")
+        
+        switch_days(day) 
