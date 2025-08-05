@@ -1,0 +1,5 @@
+class Solution:
+    def printNumber(self):
+
+        x=int(input())
+        print(x)
