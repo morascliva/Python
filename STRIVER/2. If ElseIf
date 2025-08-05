@@ -1,3 +1,4 @@
+
 class Solution:
     def studentGrade(self, marks):
         if marks>=90:
