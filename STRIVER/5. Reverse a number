@@ -4,3 +4,21 @@ class Solution:
             return -int(str(-n)[::-1])
         return int(str(n)[::-1])
 
+
+
+
+
+
+ Why are there two colons [::-1]?
+This is called slicing in Python.
+
+ Basic slicing format:
+python
+Copy
+Edit
+sequence[start:stop:step]
+start: index to start from
+
+stop: index to stop before
+
+step: how many steps to move (can be negative for reverse)
