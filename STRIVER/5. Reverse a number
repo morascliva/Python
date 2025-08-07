@@ -24,3 +24,9 @@ start: index to start from
 stop: index to stop before
 
 step: how many steps to move (can be negative for reverse)
+
+
+
+class Solution:
+    def reverseWord(self, word):
+        return word[::-1]
