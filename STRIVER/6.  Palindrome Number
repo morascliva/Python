@@ -1,0 +1,9 @@
+class Solution:
+    def isPalindrome(self, n):
+        return str(n) == str(n)[::-1]
+        
+
+class Solution:
+    def isPalindrome(self, word):
+        word = word.lower()
+        return word == word[::-1]
