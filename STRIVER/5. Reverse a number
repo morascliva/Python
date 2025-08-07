@@ -1,0 +1,6 @@
+class Solution:
+    def reverseNumber(self, n):
+        if n < 0:
+            return -int(str(-n)[::-1])
+        return int(str(n)[::-1])
+
