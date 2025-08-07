@@ -1,0 +1,25 @@
+class Solution:
+    def is_prime(self, n):
+        if n <= 1:
+            return False
+        for i in range(2, int(n**0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+
+
+
+Explanation of Code:
+🔹 if n <= 1: return False
+Numbers less than or equal to 1 are not prime by definition.
+
+🔹 for i in range(2, int(n**0.5) + 1):
+We check for divisors only up to √n instead of n for efficiency.
+
+If any number in that range divides n, it’s not a prime.
+
+🔹 if n % i == 0: return False
+If n is divisible by i, then it's not prime.
+
+🔹 return True
+If no divisors are found, the number is prime.
