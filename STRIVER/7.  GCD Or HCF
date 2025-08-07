@@ -3,7 +3,7 @@ def find_gcd(n1, n2):
         n1, n2 = n2, n1 % n2
     return n1
 
-
+This is a loop that continues as long as n2 is not zero.
 
 import math
 
