@@ -5,7 +5,8 @@ class Solution:
         return int(str(n)[::-1])
 
 
-
+str(n)[::-1]: reverses the number as a string.
+int(...): converts it back to integer.
 
 
 
