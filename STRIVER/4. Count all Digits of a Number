@@ -9,3 +9,9 @@ str(n) converts the number to a string.
 abs(n) ensures it works for negative numbers too.
 
 len(...) counts how many characters (digits) are in the string.
+
+
+class Solution:
+    def countLetters(self, word):
+        return len(word)
+
