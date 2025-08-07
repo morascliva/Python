@@ -1,0 +1,56 @@
+🔁 First iteration:
+n1 = 48, n2 = 18
+
+n1 % n2 = 48 % 18 = 12
+
+Now, update values:
+
+n1 = 18, n2 = 12
+
+🔁 Second iteration:
+n1 = 18, n2 = 12
+
+def find_gcd(n1, n2):
+    while n2:
+        n1, n2 = n2, n1 % n2
+    return n1
+
+
+
+import math
+
+def find_gcd(n1, n2):
+    return math.gcd(n1, n2)
+
+
+
+
+n1 % n2 = 18 % 12 = 6
+
+Update:
+
+n1 = 12, n2 = 6
+
+🔁 Third iteration:
+n1 = 12, n2 = 6
+
+n1 % n2 = 12 % 6 = 0
+
+Update:
+
+n1 = 6, n2 = 0
+
+Now the loop stops because n2 = 0.
+
+✔️ Answer: n1 = 6 is returned → this is the GCD of 48 and 18.
+
+💡 Summary of Logic:
+Keep replacing:
+
+n1 with n2
+
+n2 with n1 % n2
+
+Stop when n2 becomes 0
+
+Return n1 (it will be the GCD)
