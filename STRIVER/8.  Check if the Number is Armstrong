@@ -1,0 +1,11 @@
+cclass Solution:
+    def is_armstrong(self, n):
+        num_str = str(n)
+        power = len(num_str)
+        total = sum(int(digit) ** power for digit in num_str)
+        return total == n
+
+# Usage:
+sol = Solution()
+print(sol.is_armstrong(153))  # True
+
