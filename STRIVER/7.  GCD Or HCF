@@ -1,15 +1,3 @@
-🔁 First iteration:
-n1 = 48, n2 = 18
-
-n1 % n2 = 48 % 18 = 12
-
-Now, update values:
-
-n1 = 18, n2 = 12
-
-🔁 Second iteration:
-n1 = 18, n2 = 12
-
 def find_gcd(n1, n2):
     while n2:
         n1, n2 = n2, n1 % n2
@@ -24,7 +12,17 @@ def find_gcd(n1, n2):
 
 
 
+🔁 First iteration:
+n1 = 48, n2 = 18
 
+n1 % n2 = 48 % 18 = 12
+
+Now, update values:
+
+n1 = 18, n2 = 12
+
+🔁 Second iteration:
+n1 = 18, n2 = 12
 n1 % n2 = 18 % 12 = 6
 
 Update:
