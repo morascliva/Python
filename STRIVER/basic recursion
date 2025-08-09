@@ -1,0 +1,6 @@
+def pond(n):
+    if n > 0:
+        print("abc")
+        pond(n-1)  # recursive call only if n > 0
+
+pond(3)
