@@ -4,3 +4,16 @@ def SumN(i,n,sm):
   return sumN(i+1,n,sm+i)
 ans = sumN(1,4,0)
 print(ans)
+
+
+Step-by-step Execution:
+
+sumN(1,4,0) → i=1 → adds 1 → calls sumN(2,4,1)
+
+sumN(2,4,1) → adds 2 → calls sumN(3,4,3)
+
+sumN(3,4,3) → adds 3 → calls sumN(4,4,6)
+
+sumN(4,4,6) → adds 4 → calls sumN(5,4,10)
+
+i > n → returns 10
