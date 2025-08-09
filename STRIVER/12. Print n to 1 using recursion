@@ -1,0 +1,6 @@
+def print0n(n):
+  if n==0:
+    return 
+  print(n)
+  print0n(n-1)
+print0n(6)  
