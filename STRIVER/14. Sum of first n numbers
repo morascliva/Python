@@ -1,0 +1,6 @@
+def SumN(i,n,sm):
+  if i>n:
+      return sm
+  return sumN(i+1,n,sm+i)
+ans = sumN(1,4,0)
+print(ans)
