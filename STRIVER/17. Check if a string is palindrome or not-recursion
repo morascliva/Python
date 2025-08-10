@@ -1,0 +1,18 @@
+lst = list(map(int, input().split()))
+n = len(lst)
+s = 0
+e = n - 1
+while s <= e:
+    lst[s], lst[e] = lst[e], lst[s]
+    s += 1
+    e -= 1
+print(lst)
+
+
+s starts from the first element.
+e starts from the last element.
+
+lst[s], lst[e] = lst[e], lst[s] → swaps the elements at the start and end positions.
+s += 1 → moves start pointer forward.
+e -= 1 → moves end pointer backward.
+
