@@ -17,3 +17,42 @@ Swap lst[1] ↔ lst[3]
 [5, 2, 3, 4, 1] → [5, 4, 3, 2, 1]
 
 Loop ends because n//2 = 2
+
+
+lst = list(map(int, input().split()))
+n = len(lst)
+s = 0
+e = n - 1
+while s <= e:
+    lst[s], lst[e] = lst[e], lst[s]
+    s += 1
+    e -= 1
+print(lst)
+
+
+s starts from the first element.
+
+e starts from the last element.
+
+
+Runs until s crosses e (meaning we’ve swapped everything).
+
+lst[s], lst[e] = lst[e], lst[s] → swaps the elements at the start and end positions.
+
+s += 1 → moves start pointer forward.
+
+e -= 1 → moves end pointer backward.
+
+📌 Step-by-step for input [1, 2, 3, 4, 5]:
+
+First iteration (s=0, e=4):
+Swap 1 ↔ 5 → [5, 2, 3, 4, 1]
+s=1, e=3
+
+Second iteration (s=1, e=3):
+Swap 2 ↔ 4 → [5, 4, 3, 2, 1]
+s=2, e=2
+
+Third iteration (s=2, e=2):
+Swap 3 ↔ 3 (no change) → [5, 4, 3, 2, 1]
+s=3, e=1 → Loop ends.
