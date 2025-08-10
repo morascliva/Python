@@ -3,3 +3,17 @@ n = len(lst)
 for i in range(n // 2):
     lst[i], lst[n - 1 - i] = lst[n - 1 - i], lst[i]
 print(lst)
+
+
+
+Example (step-by-step):
+
+First iteration (i = 0):
+Swap lst[0] ↔ lst[4]
+[1, 2, 3, 4, 5] → [5, 2, 3, 4, 1]
+
+Second iteration (i = 1):
+Swap lst[1] ↔ lst[3]
+[5, 2, 3, 4, 1] → [5, 4, 3, 2, 1]
+
+Loop ends because n//2 = 2
