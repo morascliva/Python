@@ -1,0 +1,28 @@
+arr=[10,5,5,12,6,7,19]
+print(arr)
+d={}
+for item in arr:
+      d[item]=d.get(item,0)+1
+print(d)
+explain the code logic
+
+d = {}
+d will store frequency counts for each number in arr.
+The key will be the number, the value will be how many times it appears.
+
+Loop through each item
+python
+Copy
+Edit
+for item in arr:
+    d[item] = d.get(item, 0) + 1
+What happens here:
+d.get(item, 0):
+
+Looks for item in the dictionary.
+
+If it exists, returns its current value (count so far).
+
+If it doesn’t exist, returns 0 (default value).
+
+Then we add 1 to that count and assign it back to d[item]
