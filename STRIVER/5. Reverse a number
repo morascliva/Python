@@ -1,4 +1,5 @@
 
+
 class Solution:
     def reverseNumber(self, n):
         if n < 0:
