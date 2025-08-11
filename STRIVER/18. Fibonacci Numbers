@@ -25,3 +25,33 @@ def fib(n):
 
 n = int(input())
 print(fib(n))
+
+
+return fib(n - 1) + fib(n - 2)
+For any n > 1, Fibonacci is:
+
+
+F(n)=F(n−1)+F(n−2)
+The function calls itself twice:
+Once for (n - 1) → previous number in the sequence
+Once for (n - 2) → two numbers back
+It adds the results together and returns the sum.
+
+
+
+Example Run:
+If we input:
+
+n = 4
+The calls look like this:
+
+
+fib(4)
+= fib(3) + fib(2)
+= (fib(2) + fib(1)) + (fib(1) + fib(0))
+= ((fib(1) + fib(0)) + 1) + (1 + 0)
+= ((1 + 0) + 1) + (1 + 0)
+= (1 + 1) + 1
+= 2 + 1
+= 3
+So F(4) = 3 
