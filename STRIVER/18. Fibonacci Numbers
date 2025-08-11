@@ -10,6 +10,10 @@ else:
         a, b = b, a + b
     print(b)
 
+_ is a throwaway variable since we don’t use the loop counter.
+This loop runs for each Fibonacci position starting from 2 up to n.
+b becomes the sum of the last two numbers (like in the Fibonacci definition).
+a moves forward to take the old b’s value.
 
 
 def fib(n):
