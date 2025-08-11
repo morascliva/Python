@@ -1,0 +1,19 @@
+mxCount =0
+mxValue=-1
+mnCount =1000000
+mnValue=None
+for key ,count in d.items():
+           if mxCount<count:
+              mxValue=key
+              mxCount=count
+          if mnCount>count
+             mnValue=key
+             mnCount=count
+print(mxCount,mxValue)
+print(mnCount,mnValue)
+
+mxCount → highest frequency seen so far (starts at 0).
+mxValue → the element with that highest frequency (starts at -1, just as a placeholder).
+mnCount → lowest frequency seen so far (starts very large so any real count will be smaller).
+mnValue → the element with that lowest frequency.
+
