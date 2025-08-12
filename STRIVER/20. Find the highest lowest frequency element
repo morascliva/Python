@@ -20,3 +20,8 @@ mxValue → the element with that highest frequency (starts at -1, just as a pla
 mnCount → lowest frequency seen so far (starts very large so any real count will be smaller).
 mnValue → the element with that lowest frequency.
 
+mxCount = 0       # Start with 0 as the largest count found so far
+mxValue = -1      # Placeholder for the key with the max count
+mnCount = 1000000 # Start with a very large number as the smallest count
+mnValue = None    # Placeholder for the key with the min count
+
