@@ -1,0 +1,17 @@
+def bubble_sort(nums):
+    n = len(nums)
+    
+    # Traverse through all elements in the list
+    for i in range(n):
+        # Last i elements are already in the correct position
+        for j in range(0, n - i - 1):
+            # Swap if the element is greater than the next one
+            if nums[j] > nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
+    
+    return nums
+
+
+# Example
+nums = [7, 4, 1, 5, 3]
+print(bubble_sort(nums))  # Output: [1, 3, 4, 5, 7]
