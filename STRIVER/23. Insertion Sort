@@ -1,0 +1,20 @@
+def insertion_sort(nums):
+    # Loop through each element starting from index 1
+    for i in range(1, len(nums)):
+        key = nums[i]          # The element we want to place correctly
+        j = i - 1              # Start checking from the previous element
+
+        # Move elements greater than key one position ahead
+        while j >= 0 and nums[j] > key:
+            nums[j + 1] = nums[j]
+            j -= 1
+
+        # Place key at its correct position
+        nums[j + 1] = key
+
+    return nums
+
+
+# Example usage
+nums = [7, 4, 1, 5, 3]
+print(insertion_sort(nums))  # Output: [1, 3, 4, 5, 7]
