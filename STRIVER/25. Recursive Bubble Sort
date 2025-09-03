@@ -1,0 +1,15 @@
+class Solution:
+    def bubbleSort(self, nums):
+        # Helper function that sorts first n elements recursively
+        def bubble(nums, n):
+            # Base case: if there's only one element, do nothing
+            if n == 1:
+                return
+            # Perform one bubble pass
+            for i in range(n - 1):
+                if nums[i] > nums[i + 1]:
+                    nums[i], nums[i + 1] = nums[i + 1], nums[i]
+            # Recursively sort the first n-1 elements
+            bubble(nums, n - 1)
+        bubble(nums, len(nums))
+        return nums
