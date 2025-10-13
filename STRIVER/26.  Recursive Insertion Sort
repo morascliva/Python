@@ -1,0 +1,29 @@
+class Solution:
+    def insertionSort(self, nums):
+        # Helper function to insert the last element at its correct position recursively
+        def insert(nums, n):
+            # Base case: if list has one element, it's already sorted
+            if n <= 0:
+                return
+            
+            # Insert the nth element in its correct position in sorted part [0..n-1]
+            insert(nums, n - 1)
+            
+            last = nums[n]
+            j = n - 1
+
+            # Move elements greater than last one position ahead (recursively)
+            def shift(nums, j, last):
+                if j >= 0 and nums[j] > last:
+                    nums[j + 1] = nums[j]
+                    shift(nums, j - 1, last)
+                else:
+                    nums[j + 1] = last
+
+            shift(nums, j, last)
+
+        insert(nums, len(nums) - 1)
+        return nums
+
+
+
