@@ -1,0 +1,9 @@
+class Solution:
+    def isSorted(self, nums):
+        # Loop through each element and compare with the next one
+        for i in range(len(nums) - 1):
+            # If any element is greater than the next one, it's not sorted
+            if nums[i] > nums[i + 1]:
+                return False
+        # If loop completes, array is sorted
+        return True
