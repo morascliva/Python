@@ -1,0 +1,16 @@
+class Solution:
+    def secondLargestElement(self, nums):
+        # If the array has fewer than 2 elements, second largest doesn't exist
+        if len(nums) < 2:
+            return -1
+        
+        # Convert to a set to remove duplicates
+        unique_nums = list(set(nums))
+        
+        # If after removing duplicates, fewer than 2 elements remain, return -1
+        if len(unique_nums) < 2:
+            return -1
+        
+        # Sort in descending order and return the second element
+        unique_nums.sort(reverse=True)
+        return unique_nums[1]
