@@ -1,4 +1,5 @@
 
+
 def merge_sort(nums):
     # Base case: if array has 1 or 0 elements, it's already sorted
     if len(nums) <= 1:
