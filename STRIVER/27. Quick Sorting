@@ -1,4 +1,3 @@
-
 class Solution:
     def quickSort(self, nums):
         # Base case: array with 0 or 1 elements is already sorted
