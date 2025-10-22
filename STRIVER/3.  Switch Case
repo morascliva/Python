@@ -1,3 +1,4 @@
+
 class Solution:
     def whichWeekDay(self, day):
         def switch_days(option):
