@@ -1,0 +1,13 @@
+class Solution:
+  def pascal(self,n):
+    triangle=[[1]]
+    for i in range(1,n):
+      p=trinagle[-1]
+      r=[1]
+      for j in rangle(1,len(p)):
+        r.append(p[j-1]+p[j])
+     r.append(1)
+     triangle.append(r)
+    return triangle
+obj=Solution()
+print(obj.pascal(5))
