@@ -1,0 +1,21 @@
+class Solution:
+    def vector(self, arr):
+        result = []
+        count = {}
+
+        for i in range(len(arr)):
+            if arr[i] in count:
+                count[arr[i]] += 1
+            else:
+                count[arr[i]] = 1
+
+            # When element appears exactly 3 times, append it to result
+            if count[arr[i]] == 3:
+                result.append(arr[i])
+
+        return result
+
+
+arr = [33, 11, 33, 11, 11, 33]
+obj = Solution()
+print(obj.vector(arr))
