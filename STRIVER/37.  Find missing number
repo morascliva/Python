@@ -1,0 +1,27 @@
+class Solution:
+    def missingNumber(self, nums):
+    
+        n = len(nums)
+        
+        # 1. Calculate the expected sum of numbers from 0 to n.
+        # The formula for the sum of the first n non-negative integers is: n * (n + 1) / 2
+        expected_sum = n * (n + 1) // 2
+        
+        # 2. Calculate the actual sum of the numbers in the array.
+        actual_sum = sum(nums)
+        
+        # 3. The difference is the missing number.
+        missing_number = expected_sum - actual_sum
+        
+        return missing_number
+
+# --- Example Usage ---
+# solution = Solution()
+
+# nums1 = [0, 2, 3, 1, 4]
+# # n = 5. Expected Sum = 5 * 6 / 2 = 15. Actual Sum = 0+2+3+1+4 = 10. Missing: 15 - 10 = 5
+# print(solution.missingNumber(nums1))  # Output: 5
+
+# nums2 = [0, 1, 2, 4, 5, 6]
+# # n = 6. Expected Sum = 6 * 7 / 2 = 21. Actual Sum = 0+1+2+4+5+6 = 18. Missing: 21 - 18 = 3
+# print(solution.missingNumber(nums2))  # Output: 3
