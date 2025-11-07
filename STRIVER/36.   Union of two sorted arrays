@@ -1,0 +1,45 @@
+class Solution:
+    def unionArray(self, nums1, nums2):
+        n1 = len(nums1)
+        n2 = len(nums2)
+
+        ptr1 = 0
+        ptr2 = 0
+        
+        union = []
+
+        # Process both arrays
+        while ptr1 < n1 and ptr2 < n2:
+            # Pick smaller value
+            if nums1[ptr1] < nums2[ptr2]:
+                val = nums1[ptr1]
+                ptr1 += 1
+
+            elif nums2[ptr2] < nums1[ptr1]:
+                val = nums2[ptr2]
+                ptr2 += 1
+
+            else:  # equal
+                val = nums1[ptr1]
+                ptr1 += 1
+                ptr2 += 1
+
+            # Add to union without duplicates
+            if not union or union[-1] != val:
+                union.append(val)
+
+        # Add remaining nums1
+        while ptr1 < n1:
+            val = nums1[ptr1]
+            ptr1 += 1
+            if not union or union[-1] != val:
+                union.append(val)
+
+        # Add remaining nums2
+        while ptr2 < n2:
+            val = nums2[ptr2]
+            ptr2 += 1
+            if not union or union[-1] != val:
+                union.append(val)
+
+        return union
