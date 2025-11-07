@@ -1,0 +1,36 @@
+class Solution:
+    def findMaxConsecutiveOnes(self, nums):
+       
+        # Tracks the current count of consecutive 1s encountered so far.
+        current_count = 0
+        
+        # Tracks the highest consecutive count found across the entire array.
+        max_count = 0
+        
+        for num in nums:
+            if num == 1:
+                # If the element is 1, increment the current sequence counter.
+                current_count += 1
+            else:
+                # If the element is 0, the sequence is broken.
+                
+                # First, check if the completed sequence (current_count) 
+                # is the new maximum.
+                if current_count > max_count:
+                    max_count = current_count
+                
+                # Reset the current counter for the new sequence.
+                current_count = 0
+        
+        # Final check: The loop might end with a sequence of 1s (e.g., [1, 1, 1]).
+        # The maximum count needs to be updated one last time outside the loop.
+        if current_count > max_count:
+            max_count = current_count
+            
+        return max_count
+
+# --- Example Usage ---
+# solution = Solution()
+
+# nums1 = [1, 1, 0, 0, 1, 1, 1, 0]
+# print(solution.findMaxConsecutiveOnes(nums1))  # Output: 3
