@@ -20,3 +20,67 @@ class Solution:
             nums[left], nums[right] = nums[right], nums[left]
             left += 1
             right -= 1
+
+
+
+
+
+
+
+
+
+Step-by-Step Tracing (Code As Given)
+
+**Example:** $nums = [1, 2, 3, 4, 5, 6, 7]$, $k = 3$
+
+**Goal:** Right rotate by 3 $\rightarrow$ **Expected result:** $[5, 6, 7, 1, 2, 3, 4]$
+
+**Initial values:** $n = 7$, $k = 3$.
+
+### **Initialization**
+
+* `n = len(nums)`: $n = 7$
+* `k = k % n`: $k = 3 \% 7 = 3$
+
+---
+
+### **Step 1: Reverse the first $k$ elements**
+
+* `self.reverse(nums, 0, k - 1)` $\rightarrow$ `self.reverse(nums, 0, 2)`
+* **Operation:** Reverse the subarray $[1, 2, 3]$
+* **Trace of `reverse(nums, 0, 2)`:**
+    * `left=0`, `right=2`. Swap `nums[0]` and `nums[2]`. $\rightarrow$ `[3, 2, 1, 4, 5, 6, 7]`
+    * `left=1`, `right=1`. Loop terminates.
+* **`nums` after Step 1:** `[3, 2, 1, 4, 5, 6, 7]`
+
+---
+
+### **Step 2: Reverse the remaining $n - k$ elements**
+
+* `self.reverse(nums, k, n - 1)` $\rightarrow$ `self.reverse(nums, 3, 6)`
+* **Operation:** Reverse the subarray $[4, 5, 6, 7]$
+* **Trace of `reverse(nums, 3, 6)`:**
+    * `left=3`, `right=6$. Swap `nums[3]` (4) and `nums[6]` (7). $\rightarrow$ `[3, 2, 1, 7, 5, 6, 4]`
+    * `left=4`, `right=5$. Swap `nums[4]` (5) and `nums[5]` (6). $\rightarrow$ `[3, 2, 1, 7, 6, 5, 4]`
+    * `left=5`, `right=4$. Loop terminates.
+* **`nums` after Step 2:** `[3, 2, 1, 7, 6, 5, 4]`
+
+---
+
+### **Step 3: Reverse the whole array**
+
+* `self.reverse(nums, 0, n - 1)` $\rightarrow$ `self.reverse(nums, 0, 6)`
+* **Operation:** Reverse the entire array `[3, 2, 1, 7, 6, 5, 4]`
+* **Trace of `reverse(nums, 0, 6)`:**
+    * `l=0`, `r=6`: Swap 3 and 4 $\rightarrow$ `[4, 2, 1, 7, 6, 5, 3]`
+    * `l=1`, `r=5`: Swap 2 and 5 $\rightarrow$ `[4, 5, 1, 7, 6, 2, 3]`
+    * `l=2`, `r=4`: Swap 1 and 6 $\rightarrow$ `[4, 5, 6, 7, 1, 2, 3]`
+    * `l=3`, `r=3`: Loop terminates.
+* **`nums` after Step 3:** `[4, 5, 6, 7, 1, 2, 3]`
+
+---
+
+### **Conclusion**
+
+The final array is **$[4, 5, 6, 7, 1, 2, 3]$**.
+
