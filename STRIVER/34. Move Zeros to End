@@ -1,0 +1,24 @@
+class Solution:
+    def moveZeroes(self, nums):
+       
+        n = len(nums)
+        # 'write_index' tracks the position where the next non-zero element should be placed.
+        write_index = 0
+        
+        # 1. Move all non-zero elements to the front
+        for read_index in range(n):
+            if nums[read_index] != 0:
+                # Place the non-zero element at the 'write_index' position
+                nums[write_index] = nums[read_index]
+                write_index += 1
+                
+        # 2. Fill the rest of the array (from write_index to the end) with zeros
+        # After the loop, 'write_index' is the first position that needs a zero.
+        for i in range(write_index, n):
+            nums[i] = 0
+
+# --- Example Usage ---
+# solution = Solution()
+# nums1 = [0, 1, 4, 0, 5, 2]
+# solution.moveZeroes(nums1)
+# print(nums1)  # Output: [1, 4, 5, 2, 0, 0]
