@@ -1,0 +1,11 @@
+class Solution:
+    def  rotateArrayByOne(self, nums):
+        if not nums:
+            return
+        
+        first = nums[0]  # store first element
+        
+        for i in range(len(nums) - 1):
+            nums[i] = nums[i + 1]   # shift left
+        
+        nums[-1] = first  # put first element at end
