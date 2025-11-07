@@ -1,0 +1,25 @@
+class Solution:
+    def linearSearch(self, nums, target):
+        
+        # Iterate through the array elements using their index (i)
+        for i in range(len(nums)):
+            # Check if the current element is equal to the target
+            if nums[i] == target:
+                # If found, immediately return the current index, as this is the first (smallest) occurrence.
+                return i
+        
+        # If the loop finishes without finding the target, return -1
+        return -1
+
+# --- Example Usage ---
+# solution = Solution()
+
+# Example 1: Target found
+# nums1 = [2, 3, 4, 5, 3]
+# target1 = 3
+# print(solution.linearSearch(nums1, target1))  # Output: 1
+
+# Example 2: Target not found
+# nums2 = [2, -4, 4, 0, 10]
+# target2 = 6
+# print(solution.linearSearch(nums2, target2))  # Output: -1
