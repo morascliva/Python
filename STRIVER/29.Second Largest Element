@@ -1,6 +1,3 @@
-
-
-
 class Solution:
     def secondLargestElement(self, nums):
         # If the array has fewer than 2 elements, second largest doesn't exist
