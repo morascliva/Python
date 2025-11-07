@@ -1,0 +1,12 @@
+class Solution:
+    def singleNumber(self, nums):
+    
+        # Initialize the result accumulator to 0 (the XOR identity).
+        single = 0
+        
+        # XOR every element in the array with the accumulator.
+        for num in nums:
+            single ^= num
+            
+        # The final value of 'single' is the number that appeared once.
+        return single
