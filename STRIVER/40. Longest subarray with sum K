@@ -1,0 +1,24 @@
+class Solution:
+    def longestSubarray(self, nums, k):
+        prefix_sum = 0
+        max_length = 0
+        seen = {}  # stores: prefix_sum -> first index
+
+        for i in range(len(nums)):
+            prefix_sum += nums[i]
+
+            # Case 1: subarray from index 0 to i sums to k
+            if prefix_sum == k:
+                max_length = max(max_length, i + 1)
+
+            # Case 2: subarray (j+1 ... i) sums to k  
+            # if prefix_sum - k was seen before at index j
+            if (prefix_sum - k) in seen:
+                length = i - seen[prefix_sum - k]
+                max_length = max(max_length, length)
+
+            # Store prefix_sum only if not seen before
+            if prefix_sum not in seen:
+                seen[prefix_sum] = i
+
+        return max_length
